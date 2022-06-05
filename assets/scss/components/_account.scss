@@ -1,0 +1,94 @@
+/*
+************
+*************************
+39. Account
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+// sign in
+.sign-in-area, .sign-up-area {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    @media #{$lg, $md, $xs} {
+        padding: 30px 0;
+    }
+}
+.sg-signin-img-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44.4%;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    @media #{$lg, $md, $xs} {
+        width: 100%;
+        z-index: -1;
+    }
+}
+.sg-account-wrap-6 {
+    @media #{$lg} {
+        padding: 80px 80px;
+        border-radius: 10px;
+        background: var(--clr-common-white);
+    }
+	@media #{$md} {
+        background: var(--clr-common-white);
+        padding: 60px;
+        border-radius: 10px;
+    }
+    @media #{$xs} {
+        background: var(--clr-common-white);
+        padding: 55px 25px;
+        border-radius: 10px;
+    }
+    @media #{$sm} {
+        padding: 60px 50px;
+    }
+}
+.wrap.has-arrow:after {
+    position: absolute;
+    right: 30px;
+    top: 27px;
+    width: 11px;
+    height: 10px;
+    background: #DBDBDB;
+    content: "";
+    display: block;
+    z-index: 33;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+.ui-datepicker td span, .ui-datepicker td a {
+	text-align: center;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+	border-color: var(--clr-bg-gray-3);
+	color: var(--clr-body-text);
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+	background: var(--clr-theme-primary);
+	border-color: var(--clr-theme-primary);
+	color: var(--clr-common-white);
+}
+.ui-widget-header {
+	border: 1px solid transparent;
+	background: var(--clr-bg-gray-12);
+	color: var(--clr-common-black);
+	font-weight: 500;
+}
+.ui-datepicker th {
+	text-align: center;
+    color: var(--clr-common-black);
+	font-weight: 500;
+}
+.ui-widget.ui-widget-content {
+	border: 1px solid var(--clr-bg-gray-3);
+}
+.sg-appoint-form.mb-50 {
+    @media #{$xs} {
+        margin-bottom: 40px;
+    }
+}

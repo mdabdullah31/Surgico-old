@@ -1,0 +1,167 @@
+/*
+************
+*************************
+11. cta
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+.sg-cta {
+    &-box {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding-right: 0;
+        @media #{$lg, $xl, $xxl, $xxxl} {
+            padding-right: 73px;
+            border-radius: 25px;
+        }
+        @media #{$md} {
+            padding: 50px;
+            border-radius: 25px;
+        }
+        @media #{$xs} {
+            padding: 45px 30px;
+            border-radius: 15px;
+            padding-bottom: 50px;
+        }
+        &.has-transform-reverce-top {
+            margin-top: -100px;
+        }
+        & > * {
+            position: relative;
+            z-index: 3;
+        }
+        &.has-cta-bg-before {
+            position: relative;
+            &::after {
+                position: absolute;
+                right: -41.6%;
+                top: 0;
+                height: 100%;
+                content: "";
+                background-color: var(--clr-theme-primary);
+                width: 42.5%;
+                @media #{$xxxl} {
+                    display: none;
+                }
+                @media #{$xl} {
+                    right: 0;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                }
+                @media #{$lg, $md} {
+                    display: none;
+                }
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-title {
+            font-size: 50px;
+            text-align: left;
+            line-height: 1.4;
+            margin-bottom: 0;
+            color: var(--clr-common-white);
+            @media #{$lg} {
+                font-size: 45px;
+            }
+            @media #{$md} {
+                font-size: 40px;
+            }
+            @media #{$xs} {
+                font-size: 24px;
+            }
+            @media #{$sm} {
+                font-size: 40px;
+            }
+            & bdi {
+                &.cta-title {
+                    @media #{$md} {
+                        display: block;
+                    }
+                }
+            }
+            & span {
+                position: relative;
+                display: inline-block;
+                &::after {
+                    position: absolute;
+                    left: calc(100% + 20px);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 120px;
+                    height: 1px;
+                    background-color: var(--clr-common-white);
+                    content: "";
+                    @media #{$lg} {
+                        width: 80px;
+                    }
+                    @media #{$xs, $md} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.sg-cta-box {
+    @media #{$md, $xs} {
+        text-align: center;
+    }
+    & .sg-cta-box-title {
+        @media #{$md, $xs} {
+            text-align: center;
+        }
+    }
+}
+.sg-cta-box.has-cta-bg-before {
+    @media #{$lg} {
+        padding: 60px 40px;
+    }
+}
+.theme-bg {
+    background-color: var(--clr-theme-primary);
+}
+.sg-cta-box-left.mb-40 {
+    @media #{$xs} {
+        margin-bottom: 30px;
+    }
+}
+.body-typography-box-img-wrap {
+    @media #{$xs} {
+        padding-top: 15px;
+    }
+}
+.cta-style-about .sg-cta-box-left .sg-cta-box-title {
+    @media #{$md, $xs} {
+        margin-bottom: 35px;
+        line-height: 1.4;
+    }
+    @media #{$xs} {
+        font-size: 28px;
+    }
+}
+.sg-sidebar-menu-contact-widget.mb-50 {
+	clear: both;
+	padding-top: 15px;
+}
+
+.cta-style-about .sg-cta-box {
+    padding-right: 0;
+    border-radius: 0;
+    padding-left: 0;
+    & .sg-cta-box-title {
+        @media #{$xs, $md} {
+            text-align: center;
+        }
+        @media #{$sm} {
+            font-size: 40px;
+        }
+    }
+    @media #{$xs, $md} {
+        padding-right: 15px;
+        border-radius: 0;
+        padding-left: 15px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,49 @@
+/*
+************
+*************************
+40. Error
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+.err-body-content-7 {
+    & .title {
+        font-family: $dmsans;
+        font-weight: 500;
+        font-size: 50px;
+        margin-bottom: 25px;
+        @media #{$xs} {
+            font-size: 28px;
+        }
+        @media #{$sm} {
+            font-size: 38px;
+        }
+    }
+    & .subtitle {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 40px;
+        & br {
+            @media #{$lg, $md, $xs} {
+                display: none;
+            }
+        }
+    }
+}
+.error-main-wide-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    background-size: cover;
+    background-position: left bottom;
+}
+.err-bg-img {
+    @media #{$xs} {
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media #{$sm} {
+        max-width: 320px;
+    }
+}
